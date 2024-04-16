@@ -39,7 +39,7 @@ jobs:
           source-files: './checkout.md/'
           destination-username: 'idokadosh5'
           destination-repository: 'helloworld'
-          destination-directory: '.'
+          destination-directory: './charts'
           commit-email: 'idokad@gmail.com'
 
           
