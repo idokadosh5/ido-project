@@ -37,7 +37,7 @@ jobs:
         uses: timthedev07/copy_file_to_another_repo_action@v1.33.0
         with:
     # Source file from the origin directory
-            source_file: checkout.md
+            source_file: ./checkout.md
     # Destination repository
             destination_repo: idokadosh5/helloworld
     # Directory to push the file to
