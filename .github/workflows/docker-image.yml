@@ -35,6 +35,7 @@ jobs:
         uses: nkoppel/push-files-to-another-repository@v1.1.2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          INPUT_DESTINATION-BRANCH: main
         with:
           source-files: './checkout.md/'
           destination-username: 'idokadosh5'
