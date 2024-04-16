@@ -39,7 +39,7 @@ jobs:
     # Source file from the origin directory
             source_file: checkout.md
     # Destination repository
-            destination_repo: https://github.com/idokadosh5/helloworld.git
+            destination_repo: idokadosh5/helloworld.git
     # Directory to push the file to
             destination_folder: # optional
     # Email for the git commit
