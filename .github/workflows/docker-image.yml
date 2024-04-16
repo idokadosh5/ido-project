@@ -38,7 +38,7 @@ jobs:
         with:
           source-files: 'checkout.md/.'
           destination-username: 'idokadosh5'
-          destination-repository: 'idokadosh5/helloworld'
+          destination-repository: 'helloworld'
           destination-directory: '.'
           commit-email: 'idokad@gmail.com'
 
