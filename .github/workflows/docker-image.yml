@@ -45,7 +45,7 @@ jobs:
             cd helloworld  
             cd charts/hello-world
             
-            version=$(awk -F'[: ]' '/^version:/ {print $1}' Chart.yaml)
+            version=$(awk '/^version:/ {gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}' Chart.yaml)
             echo $version
             version=$(($version+1))
             #num=$(($num+1))
