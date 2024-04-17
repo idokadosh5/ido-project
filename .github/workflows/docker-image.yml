@@ -56,6 +56,9 @@ jobs:
           destination-repository: 'helloworld'
           destination-directory: './charts/hello-world'
           commit-email: 'idokad@gmail.com'
+        run: |
+           cd /home/ubuntu
+             
 
 
           
