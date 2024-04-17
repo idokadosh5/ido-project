@@ -45,7 +45,7 @@ jobs:
             cd helloworld  
             cd charts/hello-world
             version=$(awk -F'[: ]' '/^version:/ {print $2}' Chart.yaml)
-            echo "$version" | awk -F'.' '{$2+=1; printf("%d.%d.%d", $1, $2, $3)}'
+            echo "$version" | awk -F'.' '{ printf("%d.%d.%d", $1, $2+1, $3)}'
             new_version=$(echo "$version" | awk -F'.' '{$2+=1; printf("%d.%d.%d", $1, $2, $3)}')
             #echo $new_version
             awk -v new_version="$new_version" -F': ' '/^version:/ {gsub(/[0-9]+\.[0-9]+\.[0-9]+/, new_version)} 1' Chart.yaml > tmp && mv tmp Chart.yaml
