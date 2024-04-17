@@ -46,8 +46,8 @@ jobs:
             cd charts/hello-world
             
             version=$(awk -F'[: ]' '/^version:/ {print $2}' Chart.yaml)
-            version=$(($version+1))
             echo $version
+            version=$(($version+1))
             #num=$(($num+1))
             
             #echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.'
