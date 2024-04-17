@@ -34,7 +34,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
       - name: Configure Git
         env:
-            gitpass: ${{ secrets.GITHUB_TOKEN }}
+            gitpass: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
             pwd
             cd ../..
