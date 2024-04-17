@@ -35,7 +35,9 @@ jobs:
       - name: Configure Git
         env:
             gitpass: ${{ secrets.API_TOKEN_GITHUB }}
+            tags: ${{ github.GITHUB_RUN_NUMBER }}
         run: |
+            echo "tags: $tags"
             pwd
             cd ../..
             git config --global user.name "idokadosh5"
