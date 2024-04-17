@@ -53,7 +53,7 @@ jobs:
             #echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.'
             #new_version=$(echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.')
             #echo $new_version
-            awk -v version="$vesrion" '/^version:/ {$2=num} 1' Chart.yaml > tmp && mv tmp Chart.yaml
+            awk -v version="$version" '/^version:/ {$2=num} 1' Chart.yaml > tmp && mv tmp Chart.yaml
             cd ../..
             git add .
             git commit -a -m try
