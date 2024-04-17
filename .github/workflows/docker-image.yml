@@ -47,17 +47,18 @@ jobs:
             
             version=$(awk -F'[: ]' '/^version:/ {print $2}' Chart.yaml)
             version=$(($version+1))
+            echo $version
             #num=$(($num+1))
             
             #echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.'
-            new_version=$(echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.')
+            #new_version=$(echo "$version" | awk -v num="$num" -F'.' '{$2=num; print}' OFS='.')
             #echo $new_version
-            awk -v version="$version" -F': ' '/^version:/ {gsub(/[0-9]+\.[0-9]+\.[0-9]+/, version)} 1' Chart.yaml > tmp && mv tmp Chart.yaml
-            cd ../..
-            git add .
-            git commit -a -m try
-            git push
-            ls
+            #awk -v version="$version" -F': ' '/^version:/ {gsub(/[0-9]+\.[0-9]+\.[0-9]+/, version)} 1' Chart.yaml > tmp && mv tmp Chart.yaml
+            #cd ../..
+            #git add .
+            #git commit -a -m try
+            #git push
+            #ls
       - name: Push generated webpage to another repository
         uses: nkoppel/push-files-to-another-repository@v1.1.2
         env:
