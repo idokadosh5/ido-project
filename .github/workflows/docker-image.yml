@@ -33,19 +33,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
       - name: Configure Git
         run: |
-          exit
-          cd /home/ubuntu
-          git config --global user.name "idokadosh5"
-          git config --global user.email "idokadosh5@gmail.com"
-          git config --global user.password "$secrets.API_TOKEN_GITHUB"
-          git clone https://idokadosh5:$secrets.API_TOKEN_GITHUB@github.com/idokadosh5/helloworld.git
-          cd helloworld
-          touch fileup
-          cat bla>fileup
-          git add .
-          git commit -a
-          git push
-          cat ct.yaml
+            pwd
       - name: Push generated webpage to another repository
         uses: nkoppel/push-files-to-another-repository@v1.1.2
         env:
@@ -56,8 +44,7 @@ jobs:
           destination-repository: 'helloworld'
           destination-directory: './charts/hello-world'
           commit-email: 'idokad@gmail.com'
-        run: |
-           cd /home/ubuntu
+
              
 
 
