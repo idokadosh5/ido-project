@@ -35,7 +35,7 @@ jobs:
       - name: Configure Git
         env:
             gitpass: ${{ secrets.API_TOKEN_GITHUB }}
-            tags: ${{ github.GITHUB_RUN_ID }}
+            tags: ${{ github.run_number }}
         run: |
             echo "tags: $tags"
             pwd
