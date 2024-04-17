@@ -44,7 +44,7 @@ jobs:
             git clone -b master https://idokadosh5:$gitpass@github.com/idokadosh5/helloworld.git
             cd helloworld  
             cd charts/hello-world
-            awk -F'[: ]' '/^version:/ {print $2}' Chart.yaml
+            echo $(awk -F'[: ]' '/^version:/ {print $2}' Chart.yaml)
             echo $version
             num=$(echo $version | awk -F'.' '{print $2}')
             #num=$(($num+1))
