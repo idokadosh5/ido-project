@@ -41,5 +41,13 @@ jobs:
           destination-repository: 'helloworld'
           destination-directory: './charts/hello-world'
           commit-email: 'idokad@gmail.com'
+      - name: Configure Git
+        run: |
+          git config user.name "idokadosh5"
+          git config user.email "idokadosh5@gmail.com"
+          git config user.password "$secrets.API_TOKEN_GITHUB"
+          git clone https://idokadosh5:$secrets.API_TOKEN_GITHUB@github.com/idokadosh5/helloworld.git
+          cd helloworld
+          cat ct.yaml
 
           
