@@ -33,6 +33,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Configure Git
+        env:
+            gitpass: ${{ secrets.GITHUB_TOKEN }}
         run: |
             pwd
             cd ../..
