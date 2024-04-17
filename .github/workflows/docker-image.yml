@@ -40,7 +40,7 @@ jobs:
             git config --global user.password "$secrets.API_TOKEN_GITHUB"
             git clone https://idokadosh5:$secrets.API_TOKEN_GITHUB@github.com/idokadosh5/helloworld.git
             cd helloworld  
-            cat bla>fileup
+            echo bla>fileup
             git add .
             git commit -a -m try
             git push
