@@ -41,7 +41,7 @@ jobs:
             git config --global user.name "idokadosh5"
             git config --global user.email "idokadosh5@gmail.com"
             git config --global user.password "$gitpass"
-            git clone https://idokadosh5:$gitpass@github.com/idokadosh5/helloworld.git
+            git clone -b master https://idokadosh5:$gitpass@github.com/idokadosh5/helloworld.git
             cd helloworld  
             echo bla>fileup
             git add .
